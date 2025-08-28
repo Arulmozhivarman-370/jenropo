@@ -23,7 +23,7 @@ pipeline {
         stage('deploy'){
             steps{
                 echo "hello deploy stage"
-                sh 'date'
+                sh pom.xml
             }
         }
     }
