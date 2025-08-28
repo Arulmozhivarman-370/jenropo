@@ -5,19 +5,19 @@ pipeline {
         stage('compile') {
             steps {
                 echo 'Hello built stage'
-                sh 'pwd'
+                sh 'mvn compile'
             }
         }
         stage('test'){
             steps{
                 echo "hello test stage"
-                sh 'hostname'
+                sh 'mvn test'
             }
         }
         stage('package') {
             steps {
                 echo 'Hello pacakage stage'
-                sh 'pwd'
+                sh 'mvn package'
             }
         }
         stage('deploy'){
