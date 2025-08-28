@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('built') {
+        stage('compile') {
             steps {
                 echo 'Hello built stage'
                 sh 'pwd'
@@ -12,6 +12,12 @@ pipeline {
             steps{
                 echo "hello test stage"
                 sh 'hostname'
+            }
+        }
+        stage('package') {
+            steps {
+                echo 'Hello pacakage stage'
+                sh 'pwd'
             }
         }
         stage('deploy'){
