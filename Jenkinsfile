@@ -23,7 +23,7 @@ pipeline {
         stage('deploy'){
             steps{
                 echo "hello deploy stage"
-                sh pom.xml
+                sh 'hello world'
             }
         }
     }
